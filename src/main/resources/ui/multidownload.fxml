@@ -17,7 +17,9 @@
                   <TextField fx:id="tfUrl" prefHeight="25.0" prefWidth="575.0" />
                   <Button fx:id="btDownload" layoutX="459.0" layoutY="26.0" mnemonicParsing="false" onAction="#launchDownload" prefHeight="25.0" prefWidth="112.0" text="Descargar" />
                   <TabPane fx:id="tpDownloads" layoutY="62.0" prefHeight="394.0" prefWidth="578.0" tabClosingPolicy="ALL_TABS" />
-                  <Button fx:id="btStopAllDownloads" layoutX="-1.0" layoutY="462.0" mnemonicParsing="false" onAction="#stopAllDownloads" prefHeight="25.0" prefWidth="578.0" text="Cancelar todas las descargas" translateZ="-39.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="462.0" />
+                  <Button fx:id="btStopAllDownloads" layoutX="-1.0" layoutY="426.0" mnemonicParsing="false" onAction="#stopAllDownloads" prefHeight="25.0" prefWidth="578.0" text="Cancelar todas las descargas" translateZ="-39.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="426.0" />
+                  <Button fx:id="btShowLog" layoutX="471.0" layoutY="454.0" mnemonicParsing="false" onAction="#openLog" prefHeight="27.0" prefWidth="96.0" text="Abrir registro" />
+
                </children>
             </AnchorPane>
          </children>
