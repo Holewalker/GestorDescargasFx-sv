@@ -39,7 +39,6 @@ public class DownloadTask extends Task<Integer> {
             logger.trace("Máximo tamaño de fichero alcanzado");
             throw new Exception("Max. size");
         }
-
         BufferedInputStream in = new BufferedInputStream(url.openStream());
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         byte dataBuffer[] = new byte[1024];

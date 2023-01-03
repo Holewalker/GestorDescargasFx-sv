@@ -23,6 +23,7 @@ public class DownloadController implements Initializable {
 
     public TextField tfUrl;
     public Label lbStatus;
+    public Label lbTarget;
     public ProgressBar pbProgress;
     private String urlText;
     private DownloadTask downloadTask;
@@ -47,7 +48,7 @@ public class DownloadController implements Initializable {
             File file = fileChooser.showSaveDialog(tfUrl.getScene().getWindow());
             if (file == null)
                 return;
-
+            lbTarget.setText(String.valueOf(file));
             downloadTask = new DownloadTask(urlText, file);
 
             pbProgress.progressProperty().unbind();
@@ -59,13 +60,12 @@ public class DownloadController implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setContentText("La descarga ha terminado");
                     alert.show();
-                }
-                  else if (newState == Worker.State.FAILED){
+                } else if (newState == Worker.State.FAILED) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.
-                    setContentText("El tamaño de la descarga es superior al límite de 10 MB.");
+                            setContentText("El tamaño de la descarga es superior al límite de 10 MB.");
                     alert.show();
-                  }
+                }
             });
 
             downloadTask.messageProperty()
